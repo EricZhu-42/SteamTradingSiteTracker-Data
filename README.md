@@ -14,7 +14,7 @@ Datadumps/Datasets for SteamTradingSiteTracker (www.iflow.work)
 
 `DATA` 数据库包含约 15000 种动态筛选出的，挂刀比例较低的饰品的交易数据。饰品列表及数据 24 小时动态更新，Datadump 每 12 小时导出一次。
 
-其他信息详见：historical_datadumps
+其他信息详见：[historical_datadumps](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/blob/main/historical_datadumps.md)
 
 ### 2024/02/13 - 至今
 
@@ -28,7 +28,7 @@ Datadumps/Datasets for SteamTradingSiteTracker (www.iflow.work)
 - `priority` 数据库的 Datadump 存档自每天 00:15 起，每 12 小时更新一次
   - 即：每天 00:15, 12:15 生成并上传当前时刻的 Datadump
 
-具体下载方式详见：datadump_api
+具体下载方式详见：[datadump_api](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/blob/main/datadump_api.md)
 
 ## Datasets
 
