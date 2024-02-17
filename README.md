@@ -1,34 +1,37 @@
 # SteamTradingSiteTracker-Data
+
 Datadumps/Datasets for SteamTradingSiteTracker (www.iflow.work)
 
-## 数据仓库
-为了方便在主仓库上的 clone, watch 等操作，与数据集相关的文件自 2022/07/01 起被迁移至独立的[数据仓库](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data)。
+## Data Dumps
 
-## 数据集
+> 截止至 2024/02/14，本仓库的 Datadump 文件已经占据了约 10GB 的存储空间。
+>
+> 为了减少对 GitHub 存储空间的占用，自 2024/02/14 起，我们停止将 Datadump 上传至本仓库，直接通过 iflow.work 站点进行 Datadump 文件的分发。
+
+### 2022/04/18 - 2024/02/14
+
+[DataDumps](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/tree/main/DataDumps) 目录下包含了 2022/04/18 - 2024/02/14 期间 iflow.work 站点 `DATA` 数据库的 Datadump 数据。
+
+`DATA` 数据库包含约 15000 种动态筛选出的，挂刀比例较低的饰品的交易数据。饰品列表及数据 24 小时动态更新，Datadump 每 12 小时导出一次。
+
+其他信息详见：historical_datadumps
+
+### 2024/02/13 - 至今
+
+在 iflow.work 站点数据库重构后，我们继续公开提供与原先的 `DATA`  数据库相对应的 `priority` 数据库的 Datadump 存档下载。
+
+我们从所有约 60000 个 Dota2 & CS2 饰品中，动态筛选出 3000 个最适合挂刀的饰品（即：交易量大，挂刀比例低）的饰品储存于 `priority` 数据库中，保持较高的更新频率，以此为 iflow.work 的用户提供及时、准确的挂刀数据信息。
+
+相关数据时效性如下（所有时间均为 UTC+8）：
+
+- `priority` 数据库的饰品列表自每天 03:15 时起，每 8 小时更新一次
+- `priority` 数据库的 Datadump 存档自每天 00:15 起，每 12 小时更新一次
+  - 即：每天 00:15, 12:15 生成并上传当前时刻的 Datadump
+
+具体下载方式详见：datadump_api
+
+## Datasets
 
 为了获得最优的饰品筛选规则，以获得包含尽可能多低比例饰品且尽量小的饰品追踪列表，本项目构造了 [SteamBuffSnapshot](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/tree/main/SteamBuffSnapshot) 数据集。
 
 该数据集包含了 2022 年 2 月 14 日 BUFF 平台 dota2 与 csgo 所有饰品的价格数据与对应的 Steam Market 数据，共计 **38075** 条。
-
-## Data Dumps
-
-从 2022/4/25 起，可以在 [DataDumps](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/tree/main/DataDumps) 目录下获取 7 天前的 DATA 数据库的完整内容。
-
-Data dumps 将作为 _SteamBuffSnapshot_ 数据集的补充，便于开发者在更长的时间周期内进行数据分析。
-
-## 关于三种“挂刀比例”的数据说明
-
-1. 对于 `quick_price` 字段**大于 8 元**的饰品
-
-    1. 最优寄售比例：以平台最低售价卖家购入，以 Steam Market 最低寄售价卖出
-    2. 最优求购比例：以平台最低售价卖家购入，以 Steam Market 最高求购价卖出
-    3. 稳定求购比例：以平台最低售价**三位**卖家的均价购入，以 Steam Market 最高求购价第三位的价格卖出
-
-2. 对于 `quick_price` 字段**小于等于 8 元**的饰品
-    1. 最优寄售比例：以平台最低售价**十位**卖家的均价购入，以 Steam Market 最低寄售价卖出
-    2. 最优求购比例：以平台最低售价**十位**卖家的均价购入，以 Steam Market 最高求购价卖出
-    3. 稳定求购比例：以平台最低售价**十位**卖家的均价购入，以 Steam Market 最高求购价第三位的价格卖出
-
-## 数据规范更新记录
-
-1. 自 2023.04.30 起，计算 `quick_price` 字段大于 8 元的饰品的稳定求购比例时，买入价采用平台最低售价三位卖家的均价（先前为价格最低的三位卖家中发货最快的卖家的价格；但部分平台不提供有意义的“发货速度”信息）
