@@ -4,7 +4,7 @@ Datadumps/Datasets for SteamTradingSiteTracker (www.iflow.work)
 
 ## Data Dumps
 
-> 截止至 2024/02/14，本仓库的 Datadump 文件已经占据了约 10GB 的存储空间。
+> 截至 2024/02/14，本仓库的 Datadump 文件已经占据了约 10GB 的存储空间。
 >
 > 为了减少对 GitHub 存储空间的占用，自 2024/02/14 起，我们停止将 Datadump 上传至本仓库，直接通过 iflow.work 站点进行 Datadump 文件的分发。
 
@@ -25,7 +25,9 @@ Datadumps/Datasets for SteamTradingSiteTracker (www.iflow.work)
 相关数据时效性如下（所有时间均为 UTC+8）：
 
 - `priority` 数据库的饰品列表自每天 03:15 时起，每 8 小时更新一次
+
 - `priority` 数据库的 Datadump 存档自每天 00:15 起，每 12 小时更新一次
+
   - 即：每天 00:15, 12:15 生成并上传当前时刻的 Datadump
 
 具体下载方式详见：[datadump_api](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/blob/main/datadump_api.md)
