@@ -2,6 +2,10 @@
 
 Datadumps/Datasets for SteamTradingSiteTracker (www.iflow.work)
 
+## :star: NEWS
+
+- [2024/07/30] We released a [dataset](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/tree/main/BotDetectionDataset) for unsupervised bot classification. (我们发布了一份无监督机器人流量识别数据集）
+
 ## Data Dumps
 
 > 截至 2024/02/14，本仓库的 Datadump 文件已经占据了约 10GB 的存储空间。
