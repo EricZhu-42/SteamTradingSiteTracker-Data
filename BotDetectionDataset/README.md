@@ -8,7 +8,7 @@ This dataset contains access logs from the backend API servers of www.iflow.work
 
 The dataset includes **1,821,424** (approximately **1.82 million**) access records. Each record contains a user IP identifier, accessed endpoint, and query parameters. All data is sorted by timestamp in ascending order. 
 
-The first 100 records are provided as a preview, and the complete dataset can be downloaded here (ZIP format, 23.6MB compressed, 357MB JSON file when extracted, UTF-8 encoded).
+The first 100 records are provided as a [preview](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/blob/main/BotDetectionDataset/BotDetectionDataset_examples.json), and the complete dataset can be downloaded [here](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/blob/main/BotDetectionDataset/BotDetectionDataset.zip) (ZIP format, 23.6MB compressed, 357MB JSON file when extracted, UTF-8 encoded).
 
 > Due to the limited size of the log database and rolling deletion, the data provided here may not be complete.
 
