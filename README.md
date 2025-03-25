@@ -5,6 +5,7 @@ Datadumps/Datasets for SteamTradingSiteTracker (www.iflow.work)
 ## :star: NEWS
 
 - [2024/07/30] We released a [dataset](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/tree/main/BotDetectionDataset) for unsupervised bot classification. (我们发布了一份无监督机器人流量识别数据集）
+- [2024/02/13] 我们开始通过 Cloudflare R2 进行 Datadump 文件的分发
 
 ## Data Dumps
 
@@ -38,6 +39,16 @@ Datadumps/Datasets for SteamTradingSiteTracker (www.iflow.work)
 
 ## Datasets
 
+### SteamBuffSnapshot
+
+> 发布日期：2022/02/14
+
 为了获得最优的饰品筛选规则，以获得包含尽可能多低比例饰品且尽量小的饰品追踪列表，本项目构造了 [SteamBuffSnapshot](https://github.com/EricZhu-42/SteamTradingSiteTracker-Data/tree/main/SteamBuffSnapshot) 数据集。
 
 该数据集包含了 2022 年 2 月 14 日 BUFF 平台 dota2 与 csgo 所有饰品的价格数据与对应的 Steam Market 数据，共计 **38075** 条。
+
+### BotDetectionDataset
+
+> 发布日期：2024/07/30
+
+为了分析访问 www.iflow.work 站点的爬虫流量特征，便于相关领域的研究，我们将 www.iflow.work 在一个 14 天时间段内的访问事件清洗、脱敏后作为一个无监督分类（异常检测）的时序数据集公开发布。
